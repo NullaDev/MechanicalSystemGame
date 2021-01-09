@@ -18,7 +18,7 @@ import util.Frac;
  * @author lcy0x1
  * @Date 2021-1-8
  */
-public class MechanicalSystem extends SystemFeature<Machine, MechanicalSystem> {
+public final class MechanicalSystem extends SystemFeature<Machine, MechanicalSystem> {
 
 	public class Connection {
 

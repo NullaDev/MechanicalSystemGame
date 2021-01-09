@@ -13,7 +13,7 @@ import util.Face;
  * @author lcy0x1
  * @Date 2021-1-8
  */
-public class ThermalSystem extends SystemFeature<ThermalBlock, ThermalSystem> {
+public final class ThermalSystem extends SystemFeature<ThermalBlock, ThermalSystem> {
 
 	public class ThermalRuntimeFailure implements RuntimeFailure {
 

@@ -1,5 +1,7 @@
 package grid;
 
+import grid.electrical.ElectricPart;
+import grid.electrical.ElectricSystem;
 import grid.mechanical.Machine;
 import grid.mechanical.MechanicalSystem;
 import grid.thermal.ThermalBlock;
@@ -36,8 +38,10 @@ public class Registrar {
 			MechanicalSystem.class, MechanicalSystem::new);
 	public static final FeatureEntry<ThermalBlock, ThermalSystem> THERMAL = new FeatureEntry<>(ThermalBlock.class,
 			ThermalSystem.class, ThermalSystem::new);
+	public static final FeatureEntry<ElectricPart, ElectricSystem> ELECTRIC = new FeatureEntry<>(ElectricPart.class,
+			ElectricSystem.class, ElectricSystem::new);
 
-	public static final FeatureEntry<?, ?>[] LIST = { MACHINE, THERMAL };
+	public static final FeatureEntry<?, ?>[] LIST = { MACHINE, THERMAL, ELECTRIC };
 
 	public static FeatureEntry<?, ?> getType(Class<?> cls) {
 		for (FeatureEntry<?, ?> ent : LIST) {
